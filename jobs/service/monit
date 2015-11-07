@@ -1,0 +1,5 @@
+check process service
+  with pidfile /var/vcap/sys/run/service/pid
+  start program "/var/vcap/jobs/service/bin/ctl start"
+  stop program "/var/vcap/jobs/service/bin/ctl stop"
+  group vcap

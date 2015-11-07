@@ -1,0 +1,15 @@
+---
+name: http_server
+
+description: This job runs a single monitored service (HTTP server) that depends on a package.
+
+templates:
+  ctl.sh: bin/ctl
+
+packages:
+- http_server
+
+properties:
+  http_server.listen_port:
+    description: "Port to listen on"
+    default: 8080

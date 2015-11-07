@@ -1,0 +1,43 @@
+---
+name: service
+
+description: This job runs pre-start, monitored service and drain without any packages.
+
+templates:
+  pre_start.sh: bin/pre-start
+  drain.sh: bin/drain
+  ctl.sh: bin/ctl
+
+properties:
+  service.pre_start.stdout:
+    description: "Content to send to stdout"
+    default: "stdout"
+  service.pre_start.stderr:
+    description: "Content to send to stderr"
+    default: "stderr"
+  service.pre_start.delay_secs:
+    description: "Number of seconds to delay before exiting"
+    default: 0
+  service.pre_start.exit_code:
+    description: "Exit code to return"
+    default: 0
+
+  service.drain.stdout:
+    description: "Content to send to stdout"
+    default: "stdout"
+  service.drain.stderr:
+    description: "Content to send to stderr"
+    default: "stderr"
+  service.drain.delay_secs:
+    description: "Number of seconds to delay before exiting"
+    default: 0
+  service.drain.exit_code:
+    description: "Exit code to return"
+    default: 0
+
+  service.start_successfully:
+    description: "Whether monitored service should start successfully"
+    default: true
+  service.stop_successfully:
+    description: "Whether monitored service should stop successfully"
+    default: true
