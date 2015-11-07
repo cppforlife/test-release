@@ -1,0 +1,23 @@
+---
+name: http_proxy_with_requires
+
+description: This job runs an HTTP proxy and uses a link to find its backend.
+
+templates:
+  ctl.sh: bin/ctl
+
+requires:
+- http_endpoint # todo use named link!
+
+packages:
+- http_proxy
+
+properties:
+  http_proxy_with_requires.listen_port:
+    description: "Listen port"
+    default: 8080
+
+  # todo use properties on a link
+  http_proxy_with_requires.backend_port:
+    description: "Backend's port"
+    default: 8080

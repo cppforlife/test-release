@@ -3,13 +3,14 @@ package main
 import (
 	"flag"
 	"fmt"
+	"log"
 	"net/http"
 )
 
 func main() {
-	var port int
+	var listenPort int
 
-	flag.IntVar(&port, "port", 8080, "port to listen on")
+	flag.IntVar(&listenPort, "port", 8080, "listen port")
 
 	flag.Parse()
 
@@ -17,5 +18,5 @@ func main() {
 		fmt.Fprintf(w, "Accessed path %s", r.URL.Path[1:])
 	})
 
-	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", listenPort), nil))
 }

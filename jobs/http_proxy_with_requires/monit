@@ -1,0 +1,5 @@
+check process http_proxy_with_requires
+  with pidfile /var/vcap/sys/run/http_proxy_with_requires/pid
+  start program "/var/vcap/jobs/http_proxy_with_requires/bin/ctl start"
+  stop program "/var/vcap/jobs/http_proxy_with_requires/bin/ctl stop"
+  group vcap

@@ -1,0 +1,18 @@
+---
+name: http_server_with_provides
+
+description: This job runs an HTTP server and with a provides link directive.
+
+templates:
+  ctl.sh: bin/ctl
+
+packages:
+- http_server
+
+provides:
+- http_endpoint # todo export port
+
+properties:
+  http_server_with_provides.listen_port:
+    description: "Port to listen on"
+    default: 8080

@@ -1,0 +1,9 @@
+---
+name: http_proxy
+
+dependencies:
+- golang
+
+files:
+- pid_utils.sh
+- http_proxy.go
