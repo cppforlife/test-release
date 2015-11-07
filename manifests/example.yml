@@ -1,0 +1,45 @@
+---
+name: test
+
+director_uuid: 2daf673a-9755-4b4f-aa6d-3632fbed8012
+
+releases:
+- {name: test, version: latest}
+
+resource_pools:
+- name: default
+  stemcell:
+    name: bosh-warden-boshlite-ubuntu-trusty-go_agent
+    version: latest
+  network: default
+
+networks:
+- name: default
+  type: manual
+  subnets:
+  - range: 10.244.9.0/30
+    reserved: [10.244.9.1]
+    static: [10.244.9.2]
+- name: compilation
+  type: dynamic
+
+compilation:
+  workers: 5
+  network: compilation
+
+update:
+  canaries: 1
+  max_in_flight: 1
+  canary_watch_time: 5000-20000
+  update_watch_time: 5000-20000
+
+jobs:
+- name: service
+  instances: 1
+  templates:
+  - {name: service, release: test}
+  - {name: http_server, release: test}
+  resource_pool: default
+  networks:
+  - {name: default, static_ips: [10.244.9.2]}
+  properties: {}

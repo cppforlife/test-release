@@ -1,11 +1,7 @@
 set -e -x
 
-tar xzf golang/go*.src.tar.gz
+tar -C $BOSH_INSTALL_TARGET -xzf golang/go*.linux-amd64.tar.gz
 
-mv go/* $BOSH_INSTALL_TARGET
+mv $BOSH_INSTALL_TARGET/go/* $BOSH_INSTALL_TARGET
 
-cd $BOSH_INSTALL_TARGET/src
-
-export GOROOT_FINAL=$BOSH_INSTALL_TARGET
-
-./make.bash --no-clean
+rm -rf $BOSH_INSTALL_TARGET/go

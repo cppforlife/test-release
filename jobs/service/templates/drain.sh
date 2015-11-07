@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo <%= p("simple_server.drain.stdout") %>
-echo <%= p("simple_server.drain.stderr") %> 1>&2
-sleep <%= p("simple_server.drain.delay_secs") %>
-exit <%= p("simple_server.drain.exit_code") %>
+echo <%= p("service.drain.stderr") %> 1>&2
+sleep <%= p("service.drain.delay_secs") %>
+echo <%= p("service.drain.echoed_status") %>
+exit <%= p("service.drain.exit_code") %>

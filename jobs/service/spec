@@ -22,14 +22,14 @@ properties:
     description: "Exit code to return"
     default: 0
 
-  service.drain.stdout:
-    description: "Content to send to stdout"
-    default: "stdout"
   service.drain.stderr:
     description: "Content to send to stderr"
     default: "stderr"
   service.drain.delay_secs:
     description: "Number of seconds to delay before exiting"
+    default: 0
+  service.drain.echoed_status:
+    description: "Drain script specific status code"
     default: 0
   service.drain.exit_code:
     description: "Exit code to return"
