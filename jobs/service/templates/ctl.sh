@@ -19,8 +19,9 @@ case $1 in
 
   start)
     echo "Starting service"
+    sleep <%= p("service.start.delay_secs") %>
 
-    <% if p("service.start_successfully") %>
+    <% if p("service.start.success") %>
     echo 1 >> $PIDFILE
     <% end %>
 
@@ -28,8 +29,9 @@ case $1 in
 
   stop)
     echo "Stopping service"
+    sleep <%= p("service.stop.delay_secs") %>
 
-    <% if p("service.stop_successfully") %>
+    <% if p("service.stop.success") %>
     rm -f $PIDFILE
     <% end %>
 

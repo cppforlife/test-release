@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 	"net/http"
 	"net/http/httputil"
@@ -18,18 +19,14 @@ func main() {
 
 	flag.Parse()
 
-	var src, dst string
-
-	flag.Parse()
-
-	u, err := url.Parse(dst)
+	backendURL, err := url.Parse(backendAdrr)
 	if err != nil {
 		log.Fatal("Bad destination.")
 	}
 
 	srv := &http.Server{
 		Addr:           fmt.Sprintf(":%d", listenPort),
-		Handler:        httputil.NewSingleHostReverseProxy(backendAdrr),
+		Handler:        httputil.NewSingleHostReverseProxy(backendURL),
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,

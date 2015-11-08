@@ -42,4 +42,9 @@ jobs:
   resource_pool: default
   networks:
   - {name: default, static_ips: [10.244.9.2]}
-  properties: {}
+  properties:
+    service:
+      pre_start:
+        delay_secs: 40
+      stop:
+        delay_secs: 21
