@@ -1,0 +1,52 @@
+---
+packages:
+- name: golang
+  version: 9be520833047e79755b71cd1428202da83a1bbf6
+  fingerprint: 9be520833047e79755b71cd1428202da83a1bbf6
+  sha1: 151cb21c1889c5c622cbb1064a1503207204520d
+  dependencies: []
+- name: http_proxy
+  version: 4410eaba7c8c18411987829e92935d2018aa035e
+  fingerprint: 4410eaba7c8c18411987829e92935d2018aa035e
+  sha1: 803c2d1148961ce86b18c0968f51128424ff53d2
+  dependencies:
+  - golang
+- name: http_server
+  version: e4ef92d7b6233572a449e980c2ba295760c58c3f
+  fingerprint: e4ef92d7b6233572a449e980c2ba295760c58c3f
+  sha1: 1e198f6988a6bcd7164ac6790a405d12ab3f0916
+  dependencies:
+  - golang
+jobs:
+- name: drain
+  version: 7a6aaf890fa93b1a55a617b266a8ed585d10637e
+  fingerprint: 7a6aaf890fa93b1a55a617b266a8ed585d10637e
+  sha1: b6a6ddb6b698ef5db8ccb02c994f644bf715e608
+- name: errand
+  version: a308d86a354d6c81997fe1022d676b4b6ea5b56b
+  fingerprint: a308d86a354d6c81997fe1022d676b4b6ea5b56b
+  sha1: fb8a0902992f1eb6cf610713b564853bf5bbf212
+- name: http_proxy_with_requires
+  version: a36c8c6d31339f6724c2e14c572df5b24b608ac3
+  fingerprint: a36c8c6d31339f6724c2e14c572df5b24b608ac3
+  sha1: d30a73c1015968ae7036dd5d442897be4e7ed18d
+- name: http_server
+  version: a0c2dcb84d4ae2ca175031eed97228e3f17cfc23
+  fingerprint: a0c2dcb84d4ae2ca175031eed97228e3f17cfc23
+  sha1: cd4212b4afa90069ccac6e15478b704192d9ca5e
+- name: http_server_with_provides
+  version: ebbc2c9d44f82cdce919430fb56118af9ef6a918
+  fingerprint: ebbc2c9d44f82cdce919430fb56118af9ef6a918
+  sha1: dae2a082265b9e690f4c76ef56c8806b43ae8cb0
+- name: pre_start
+  version: 7a55f18adc221c2204e427712263cc0319bcf91d
+  fingerprint: 7a55f18adc221c2204e427712263cc0319bcf91d
+  sha1: 1c38a5b6e8e1589a66a1ad9899b5c4c057d3a1ac
+- name: service
+  version: 88a17b61a5b892c9c59884ea5dee04ba6e116bb2
+  fingerprint: 88a17b61a5b892c9c59884ea5dee04ba6e116bb2
+  sha1: 98eca647ddf3b24ae62fce44ea8a8e3526c3e53c
+commit_hash: de8af5a4
+uncommitted_changes: true
+name: test
+version: '1'
