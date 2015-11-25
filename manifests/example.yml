@@ -1,7 +1,7 @@
 ---
 name: test
 
-director_uuid: 2daf673a-9755-4b4f-aa6d-3632fbed8012
+director_uuid: 9bca5701-66c0-43ee-a4d0-64813b4b5ece
 
 releases:
 - {name: test, version: latest}

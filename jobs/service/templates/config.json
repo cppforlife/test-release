@@ -1,0 +1,9 @@
+<%=
+
+JSON.dump(
+	"name" => spec.name,
+	"index" => spec.index,
+	"networks" => spec.networks,
+)
+
+%>
