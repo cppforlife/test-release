@@ -1,0 +1,6 @@
+---
+name: no_templates
+
+description: This job does not have any templates.
+
+properties: {}
