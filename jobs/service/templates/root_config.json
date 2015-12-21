@@ -1,0 +1,11 @@
+<%=
+
+JSON.dump(
+	"name" => name,
+	"index" => index,
+	"properties" => properties,
+	"raw_properties" => raw_properties,
+	"spec" => spec,
+)
+
+%>

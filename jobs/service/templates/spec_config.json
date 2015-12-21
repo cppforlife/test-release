@@ -1,7 +1,8 @@
 <%=
 
 JSON.dump(
-	"name" => spec.name,
+	# todo inconsistent name vs spec.name vs spec.job
+	"name" => spec.job,
 	"index" => spec.index,
 	"networks" => spec.networks,
 )
