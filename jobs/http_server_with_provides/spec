@@ -10,7 +10,7 @@ packages:
 - http_server
 
 provides:
-- http_endpoint # todo export port
+- {name: http_endpoint, type: http_endpoint}
 
 properties:
   http_server_with_provides.listen_port:

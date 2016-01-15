@@ -6,8 +6,8 @@ description: This job runs an HTTP proxy and uses a link to find its backend.
 templates:
   ctl.sh: bin/ctl
 
-requires:
-- http_endpoint # todo use named link!
+consumes:
+- {name: http_endpoint, type: http_endpoint}
 
 packages:
 - http_proxy
