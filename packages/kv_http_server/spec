@@ -1,0 +1,9 @@
+---
+name: kv_http_server
+
+dependencies:
+- golang
+
+files:
+- pid_utils.sh
+- kv_http_server.go

@@ -1,0 +1,5 @@
+check process kv_http_server
+  with pidfile /var/vcap/sys/run/kv_http_server/pid
+  start program "/var/vcap/jobs/kv_http_server/bin/ctl start"
+  stop program "/var/vcap/jobs/kv_http_server/bin/ctl stop"
+  group vcap
