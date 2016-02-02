@@ -1,0 +1,17 @@
+---
+name: props2
+
+description: This job has several properties that are rendered into config file.
+
+templates:
+  props.json: config/props.json
+
+properties:
+  props2.defaults_to_nil:
+    description: "Defaults to nil"
+    default: ~
+  props2.defaults_to_str:
+    description: "Defaults to 'str'"
+    default: "str"
+  props2.no_default:
+    description: "No default"

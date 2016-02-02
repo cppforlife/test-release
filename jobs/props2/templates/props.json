@@ -1,0 +1,9 @@
+<%=
+
+JSON.dump(
+	"defaults_to_nil" => p("props2.defaults_to_nil"),
+	"defaults_to_str" => p("props2.defaults_to_str"),
+	"no_default" => p("props2.no_default"),
+)
+
+%>
