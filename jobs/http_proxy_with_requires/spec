@@ -5,9 +5,11 @@ description: This job runs an HTTP proxy and uses a link to find its backend.
 
 templates:
   ctl.sh: bin/ctl
+  props.json: config/props.json
 
 consumes:
 - {name: http_endpoint, type: http_endpoint}
+- {name: logs_http_endpoint, type: http_endpoint, optional: true}
 
 packages:
 - http_proxy

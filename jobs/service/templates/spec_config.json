@@ -5,6 +5,7 @@ JSON.dump(
 	"name" => spec.job,
 	"index" => spec.index,
 	"networks" => spec.networks,
+	"address" => spec.address,
 )
 
 %>

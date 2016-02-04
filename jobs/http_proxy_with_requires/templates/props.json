@@ -1,0 +1,21 @@
+<%=
+  res = {}
+
+	res["primary"] = link("http_endpoint").nodes.map do |node|
+		{
+			"id" => node.id,
+			"address" => node.address,
+		}
+	end
+
+  if_link("logs_http_endpoint") do |link|
+  	res["logs"] = link.nodes.map do |node|
+  		{
+  			"id" => node.id,
+  			"address" => node.address,
+  		}
+		end
+  end
+
+  JSON.dump(res)
+%>
