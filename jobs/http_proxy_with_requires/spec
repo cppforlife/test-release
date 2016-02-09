@@ -23,3 +23,7 @@ properties:
   http_proxy_with_requires.backend_port:
     description: "Backend's port"
     default: 8080
+
+  http_proxy_with_requires.require_logs_in_template:
+    description: "Require logs in template"
+    default: false
