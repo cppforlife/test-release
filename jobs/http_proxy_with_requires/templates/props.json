@@ -1,12 +1,12 @@
 <%=
   res = {}
 
-  res["primary"] = link("http_endpoint").nodes.map do |node|
+  res["primary"] = link("http_endpoint").instances.map do |instance|
     {
-      "name" => node.name,
-      "id" => node.id,
-      "index" => node.index,
-      "address" => node.address,
+      "name" => instance.name,
+      "id" => instance.id,
+      "index" => instance.index,
+      "address" => instance.address,
     }
   end
 
@@ -15,12 +15,12 @@
   end
 
   if_link("logs_http_endpoint") do |link|
-    res["logs"] = link.nodes.map do |node|
+    res["logs"] = link.instances.map do |instance|
       {
-        "name" => node.name,
-        "id" => node.id,
-        "index" => node.index,
-        "address" => node.address,
+        "name" => instance.name,
+        "id" => instance.id,
+        "index" => instance.index,
+        "address" => instance.address,
       }
     end
   end
