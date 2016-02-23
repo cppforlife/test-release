@@ -1,11 +1,12 @@
 ---
 name: service
 
-description: This job runs pre-start, monitored service and drain without any packages.
+description: This job runs pre-start, post-start, post-deploy, monitored service and drain without any packages.
 
 templates:
   pre_start.sh: bin/pre-start
   post_start.sh: bin/post-start
+  post_deploy.sh: bin/post_deploy
   drain.sh: bin/drain
   ctl.sh: bin/ctl
   spec_config.json: config/spec_config.json
@@ -35,6 +36,19 @@ properties:
     description: "Number of seconds to delay before exiting"
     default: 0
   service.post_start.exit_code:
+    description: "Exit code to return"
+    default: 0
+
+  service.post_deploy.stdout:
+    description: "Content to send to stdout"
+    default: "stdout"
+  service.post_deploy.stderr:
+    description: "Content to send to stderr"
+    default: "stderr"
+  service.post_deploy.delay_secs:
+    description: "Number of seconds to delay before exiting"
+    default: 0
+  service.post_deploy.exit_code:
     description: "Exit code to return"
     default: 0
 

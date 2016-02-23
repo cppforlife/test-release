@@ -1,0 +1,34 @@
+---
+name: test
+
+director_uuid: 9bca5701-66c0-43ee-a4d0-64813b4b5ece
+
+releases:
+- name: test
+  version: latest
+
+stemcells:
+- alias: default
+  os: ubuntu-trusty
+  version: latest
+
+update:
+  canaries: 1
+  max_in_flight: 1
+  canary_watch_time: 5000-20000
+  update_watch_time: 5000-20000
+
+jobs:
+- name: service
+  azs: [z2]
+  instances: 2
+  templates:
+  - {name: service, release: test}
+  - {name: post_start, release: test}
+  vm_type: default
+  stemcell: default
+  networks:
+  - name: default
+  properties:
+    post_start:
+      exit_code: 0
