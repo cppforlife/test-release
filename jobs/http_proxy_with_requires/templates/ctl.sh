@@ -20,11 +20,11 @@ case $1 in
 
     echo $$ > $PIDFILE
 
-    <% host = link("http_endpoint").instances[0].address %>
+    <% host = link("proxied_http_endpoint").instances[0].address %>
 
     exec chpst -u vcap:vcap /var/vcap/packages/http_proxy/bin/proxy \
       --port <%= p("http_proxy_with_requires.listen_port") %> \
-      --backend-addr <%= host + ":" + p("http_proxy_with_requires.backend_port").to_s %>
+      --backend-addr <%= host + ":" + link("proxied_http_endpoint").p("listen_port").to_s %>
 
     ;;
 

@@ -10,9 +10,12 @@ packages:
 - http_server
 
 provides:
-- {name: http_endpoint, type: http_endpoint}
+- name: http_endpoint
+  type: http_endpoint
+  properties:
+  - listen_port
 
 properties:
-  http_server_with_provides.listen_port:
+  listen_port:
     description: "Port to listen on"
     default: 8080

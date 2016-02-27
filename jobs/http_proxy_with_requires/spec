@@ -8,8 +8,11 @@ templates:
   props.json: config/props.json
 
 consumes:
-- {name: http_endpoint, type: http_endpoint}
-- {name: logs_http_endpoint, type: http_endpoint, optional: true}
+- name: proxied_http_endpoint
+  type: http_endpoint
+- name: logs_http_endpoint
+  type: http_endpoint
+  optional: true
 
 packages:
 - http_proxy
@@ -17,11 +20,6 @@ packages:
 properties:
   http_proxy_with_requires.listen_port:
     description: "Listen port"
-    default: 8080
-
-  # todo use properties on a link
-  http_proxy_with_requires.backend_port:
-    description: "Backend's port"
     default: 8080
 
   http_proxy_with_requires.require_logs_in_template:

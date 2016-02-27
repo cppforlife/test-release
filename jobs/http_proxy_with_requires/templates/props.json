@@ -1,7 +1,7 @@
 <%=
   res = {}
 
-  res["primary"] = link("http_endpoint").instances.map do |instance|
+  res["primary"] = link("proxied_http_endpoint").instances.map do |instance|
     {
       "name" => instance.name,
       "id" => instance.id,

@@ -20,8 +20,7 @@ case $1 in
 
     echo $$ > $PIDFILE
 
-    exec chpst -u vcap:vcap /var/vcap/packages/http_server/bin/httpd \
-      --port <%= p("http_server_with_provides.listen_port") %>
+    exec chpst -u vcap:vcap /var/vcap/packages/http_server/bin/httpd --port <%= p("listen_port") %>
 
     ;;
 
