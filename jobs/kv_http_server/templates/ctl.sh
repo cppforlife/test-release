@@ -20,8 +20,6 @@ case $1 in
 
     echo $$ > $PIDFILE
 
-    # <%= link("kv_http_server").inspect %>
-
     exec chpst -u vcap:vcap /var/vcap/packages/kv_http_server/bin/kv \
       --port <%= p("kv_http_server.listen_port") %>
 
