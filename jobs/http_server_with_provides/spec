@@ -14,8 +14,19 @@ provides:
   type: http_endpoint
   properties:
   - listen_port
+  - ca_cert
+  - some.nested.property
+- name: http_endpoint2
+  type: http_endpoint
+  properties:
+  - listen_port
+  - ca_cert
 
 properties:
   listen_port:
     description: "Port to listen on"
     default: 8080
+  ca_cert:
+    description: "CA certificate"
+  some.nested.property:
+    description: "Nested property"

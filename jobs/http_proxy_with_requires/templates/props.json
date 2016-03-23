@@ -7,6 +7,7 @@
       "id" => instance.id,
       "index" => instance.index,
       "address" => instance.address,
+      "stuff" => link("proxied_http_endpoint").p("some.nested.property", 3),
     }
   end
 

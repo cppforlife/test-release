@@ -4,4 +4,8 @@ tar -C $BOSH_INSTALL_TARGET -xzf golang/go*.linux-amd64.tar.gz
 
 mv $BOSH_INSTALL_TARGET/go/* $BOSH_INSTALL_TARGET
 
+
+
+
+
 rm -rf $BOSH_INSTALL_TARGET/go
