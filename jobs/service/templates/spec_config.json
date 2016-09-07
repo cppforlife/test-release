@@ -6,6 +6,7 @@ JSON.dump(
 	"index" => spec.index,
 	"networks" => spec.networks,
 	"address" => spec.address,
+	"ip" => spec.ip,
 )
 
 %>
