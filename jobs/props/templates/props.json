@@ -4,6 +4,10 @@ JSON.dump(
 	"defaults_to_nil" => p("props.defaults_to_nil"),
 	"defaults_to_str" => p("props.defaults_to_str"),
 	"no_default" => p("props.no_default"),
+
+	"password_without_default" => p("props.password_without_default"),
+	"password_with_default" => p("props.password_with_default"),
+	"cert_without_default" => p("props.cert_without_default"),
 )
 
 %>

@@ -15,3 +15,15 @@ properties:
     default: "str"
   props.no_default:
     description: "No default"
+
+  props.password_without_default:
+    type: password
+    description: "No default for password"
+  props.password_with_default:
+    type: password
+    description: "Password with default password"
+    default: "default-password"
+
+  props.cert_without_default:
+    type: certificate
+    description: "No default for certificate"

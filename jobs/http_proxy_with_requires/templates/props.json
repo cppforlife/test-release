@@ -11,6 +11,14 @@
     }
   end
 
+  link("proxied_http_endpoint").if_p("some.nested.property") do
+    res["some.nested.property"] = true
+  end
+
+  link("proxied_http_endpoint").if_p("some.nested") do
+    res["some.nested"] = true
+  end
+
   if p("http_proxy_with_requires.require_logs_in_template")
     link("logs_http_endpoint") # just call
   end
